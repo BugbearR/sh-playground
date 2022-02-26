@@ -20,4 +20,9 @@ timestamp2unixtime()
 '
 }
 
-printf '%s' $(timestamp2unixtime "$1")
+if [ $# -lt 1 ]
+then
+    printf '%s\n' $(timestamp2unixtime $(date -u +'%Y%m%d%H%M%S'))
+else
+    printf '%s\n' $(timestamp2unixtime "$1")
+fi
