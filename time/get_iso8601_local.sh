@@ -6,7 +6,7 @@
 strftime_subset()
 {
     # echo "$1"
-    printf '%s' "$1" | sed -e "s/%Y/$2/g" -e "s/%m/$3/g" -e "s/%d/$4/g" -e "s/%H/$5/g" -e "s/%M/$6/g" -e "s/%S/$7/g" -e "s/%zh/$8/g" -e "s/%zm/$9/g" -e "s/%z/$8:$9/g"
+    printf '%s\n' "$1" | sed -e "s/%Y/$2/g" -e "s/%m/$3/g" -e "s/%d/$4/g" -e "s/%H/$5/g" -e "s/%M/$6/g" -e "s/%S/$7/g" -e "s/%zh/$8/g" -e "s/%zm/$9/g" -e "s/%z/$8:$9/g"
 }
 
 get_current_iso8601_local()
